@@ -19,6 +19,7 @@ logrotat는 시스템로그를 자동으로 rotate, 압축, 이메일 전송을 
 
 그 다음에, `sudo vi /etc/logrotate.d/nginx`명령어를 통하여 nginx 파일을 해당 경로에 만들고. 아래 코드를 추가.
 
+~~~
 [로그가 위치하는 경로]/*.log {
     daily
     missingok
@@ -31,6 +32,7 @@ logrotat는 시스템로그를 자동으로 rotate, 압축, 이메일 전송을 
         [ ! -f [로그위치경로]/nginx.pid ] || kill -USR1 `cat [로그위치경로]nginx.pid`
     endscript
 }
+~~~
 
 마지막으로 아래 명령어를 이용하여 변경된 값을 적용해줌.
 `sudo logrotate -f /etc/logrotate.d/nginx` 
