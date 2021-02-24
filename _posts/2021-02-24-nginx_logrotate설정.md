@@ -5,7 +5,7 @@ date:   2021-02-24 01:40
 category: category1
 icon: www
 keywords: tag1, tag2
-image: /1.kafkaSetting/kafka_setting.png
+image: 1.jpg
 preview: 1
 ---
 
